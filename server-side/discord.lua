@@ -1,6 +1,18 @@
+--[[ 
+
+--- INFORMAÇÕES ---
+
+Comando: /dc.
+Descrição: Pega o discord do jogador mais próximo, se não houver ele tentara pegar o ID do jogador colocado nos argumentos primeiro vendo se ele está na cidade e depois no banco de dados.
+Desenvolvedor: Striker
+
+]]--
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 --[ /DC ]--------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
+vRP.prepare("vRP/identifier_byuserid","SELECT identifier FROM vrp_user_ids WHERE user_id = @user_id")
+
 RegisterCommand("dc", function (source, args)
     local user_id = vRP.getUserId(source)
     if vRP.hasPermission(user_id, "moderador.permissao") then
