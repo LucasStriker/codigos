@@ -2,8 +2,9 @@
 
 --- INFORMAÇÕES ---
 
-Comando: /group
+Comando: /group.
 Descrição: Setar um grupo a um jogador offline e com proteção de setagens de grupos de forma hierarquica.
+Desenvolvedor: Striker
 OBS: Configure os grupos de sua base primeira variavel.
 
 ]]--
