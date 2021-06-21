@@ -1,3 +1,16 @@
+--[[ 
+
+--- INFORMAÇÕES ---
+
+Comando: /group
+Descrição: Setar um grupo a um jogador offline e com proteção de setagens de grupos de forma hierarquica.
+OBS: Configure os grupos de sua base primeira variavel.
+
+]]--
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ /GROUP ]-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
 ⠀ local hierarquia_staff = {
     { group = "dono", perm = "dono.permissao" },
     { group = "admin", perm = "administrador.permissao" },
