@@ -13,6 +13,10 @@ Código de group: https://github.com/StrikerStore/codigos/blob/main/server-side/
 -----------------------------------------------------------------------------------------------------------------------------------------
 --[ UNGROUP ]----------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
+
+-- PERMISSÃO QUE O SISTEMA DESCONSIDERARÁ DA PROTEÇÃO HIERARQUICA
+local ignore = "dono.permissao"
+
 RegisterCommand('ungroup',function(source,args,rawCommand)
     local user_id = vRP.getUserId(source)
     local identity = vRP.getUserIdentity(user_id)
@@ -24,7 +28,7 @@ RegisterCommand('ungroup',function(source,args,rawCommand)
         if nuser_id and grupo then
             local nsource = vRP.getUserSource(nuser_id)
 
-            if not vRP.hasPermission(user_id,"dono.permissao") then
+            if not vRP.hasPermission(user_id,ignore) then
                 for k, v in pairs(hierarquia_staff) do
                     
                     if string.lower(grupo) == v.group then
