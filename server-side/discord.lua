@@ -32,7 +32,7 @@ RegisterCommand("dc", function (source, args)
                     end
                 end
     
-                TriggerClientEvent("Notify", source, "negado", "Aviso", "O ID <b>"..tonumber(args[1]).."</b> não possui <b>discord vinculado a conta</b>.")
+                TriggerClientEvent("Notify", source, "negado", "O ID <b>"..tonumber(args[1]).."</b> não possui <b>discord vinculado a conta</b>.")
             else
                 local rows = vRP.query("vRP/identifier_byuserid", { user_id = nuser_id })
 
@@ -48,9 +48,9 @@ RegisterCommand("dc", function (source, args)
                         end
                     end
 
-                    TriggerClientEvent("Notify", source, "negado", "Aviso", "O ID <b></b> não possui <b>discord vinculado a conta</b>. (MYSQL)")
+                    TriggerClientEvent("Notify", source, "negado", "O ID <b></b> não possui <b>discord vinculado a conta</b>. (MYSQL)")
                 else
-                    TriggerClientEvent("Notify", source, "negado", "Aviso", "O ID <b></b> não possui <b>conta criada</b> no banco de dados ainda.")
+                    TriggerClientEvent("Notify", source, "negado", "O ID <b></b> não possui <b>conta criada</b> no banco de dados ainda.")
                 end
             end
         else
@@ -68,7 +68,7 @@ RegisterCommand("dc", function (source, args)
                         return
                     end
 
-                    TriggerClientEvent("Notify", source, "negado", "Aviso", "O ID <b>"..nplayer_id.."</b> não possui <b>discord vinculado a conta</b>.")
+                    TriggerClientEvent("Notify", source, "negado", "O ID <b>"..nplayer_id.."</b> não possui <b>discord vinculado a conta</b>.")
                 end
             end
         end
