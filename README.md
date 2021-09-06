@@ -1,1 +1,1 @@
-Códigos desenvolvidos por mim ou por outras pessoas colocando os devidos créditos.
+Códigos desenvolvidos por mim
