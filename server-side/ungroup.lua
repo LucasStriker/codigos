@@ -48,7 +48,7 @@ RegisterCommand('ungroup',function(source,args,rawCommand)
                 end
 
             else
-                local query = vRP.query('bruxelas/getdatatable', { user_id = nuser_id })
+                local query = vRP.query('vRP/getdatatable', { user_id = nuser_id })
 
                 if query[1] then
                     local datatable = json.decode(query[1].dvalue)
@@ -59,7 +59,7 @@ RegisterCommand('ungroup',function(source,args,rawCommand)
                     else
                         datatable['groups'][grupo] = nil
                         datatable = json.encode(datatable)
-                        vRP.execute('bruxelas/attdatatable', {user_id = nuser_id, datatable = datatable})
+                        vRP.execute('vRP/attdatatable', {user_id = nuser_id, datatable = datatable})
                         TriggerClientEvent('Notify', source, 'sucesso', 'Sucesso', "O passaporte <b>" .. nuser_id .. "</b> foi <b>removido</b> do grupo <b>" .. grupo .. "</b>.")
                     end
                 else
